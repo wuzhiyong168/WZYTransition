@@ -10,6 +10,5 @@ return self.imageView;
 SecondDetailViewController *firstDetailVC = [[SecondDetailViewController alloc] init];
 firstDetailVC.image = self.imageView.image;
 [self.navigationController WZY_PushViewController:firstDetailVC popGesture:YES];
-
-![](https://github.com/wuzhiyong168/WZYTransition/blob/master/WZYTransition.gif)
 ```
+![](https://github.com/wuzhiyong168/WZYTransition/blob/master/WZYTransition.gif)
