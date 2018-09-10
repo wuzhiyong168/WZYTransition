@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## WZYTransition
 
-You can use the [editor on GitHub](https://github.com/wuzhiyong168/WZYTransition/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+### 使用方法:
 ```markdown
-Syntax highlighted code block
+1.当前控制器和SecondDetailViewController控制器都需要实现- (UIView *)WZYTransitionView方法,不能放回nil;
+- (UIView *)WZYTransitionView {
+return self.imageView;
+}
+2.使用自定义的Push方法WZY_PushViewController,如果需要支持手势popGesture传YES;
+SecondDetailViewController *firstDetailVC = [[SecondDetailViewController alloc] init];
+firstDetailVC.image = self.imageView.image;
+[self.navigationController WZY_PushViewController:firstDetailVC popGesture:YES];
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+![](https://github.com/wuzhiyong168/WZYTransition/blob/master/WZYTransition.gif)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wuzhiyong168/WZYTransition/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
